@@ -19,6 +19,12 @@
             <div  class="desc"><?php echo \tms\ApiDoc\tmsApiDoc::tell($data,'method'); ?></div>
             <hr/>
         <?php endif; ?>
+        <?php if (!is_null(\tms\ApiDoc\tmsApiDoc::tell($data,'headers'))): ?>
+            <h4 class="text-primary">Заголовки запроса:</h4>
+
+            <div  class="desc"><?php echo \tms\ApiDoc\tmsApiDoc::tell($data,'headers'); ?></div>
+            <hr/>
+        <?php endif; ?>
         <?php if (!is_null(\tms\ApiDoc\tmsApiDoc::tell($data,'get'))): ?>
             <h4 class="text-primary">GET параметры:</h4>
 

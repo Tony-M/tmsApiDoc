@@ -24,3 +24,7 @@ echo substr_count($str,"is",3)."<br>"; // The string is now reduced to "s is nic
 echo substr_count($str,"is",3,3)."<br>"; // The string is now reduced to "s i"
 ?>
 {/PHP}
+
+:HEADERS:
+описание заголовков и прочей мути
+лала
