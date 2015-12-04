@@ -81,6 +81,7 @@ class tmsApiDoc
                 }
                 if (substr($line, 0, 1) != ';' && $line!='') {
                     if($line=='|')$line='';
+                    if(!isset($data[$key]))$data[$key] = '';
                     $data[$key] .= $line.PHP_EOL;
                 }
             }

@@ -1,7 +1,12 @@
 <h3>Описание ресурса</h3>
 <div class="panel panel-default">
     <div class="panel-body">
-        <?php echo $data,'title'; ?>
+        <?php if (!is_null(\tms\ApiDoc\tmsApiDoc::tell($data, 'title'))): ?>
+
+            <div  class="desc"><?php echo \tms\ApiDoc\tmsApiDoc::tell($data, 'title'); ?></div>
+            <hr/>
+        <?php endif; ?>
+
         <?php if (!is_null(\tms\ApiDoc\tmsApiDoc::tell($data, 'description'))): ?>
             <h4 class="text-primary">Детали:</h4>
 

@@ -9,10 +9,10 @@
 namespace tms\ApiDoc;
 
 
-abstract class tmsApiDoc__AbstractAction
+ class tmsApiDoc__AbstractAction
 {
 
-    abstract public static function getData($data);
+     public static function getData($data){return null;}
 
     public static function formatOutput($data)
     {
