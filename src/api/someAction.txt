@@ -1,0 +1,6 @@
+:TITLE:
+Выполнение какого-то действия
+:METHOD:
+GET
+:URL:
+/do/some/thing

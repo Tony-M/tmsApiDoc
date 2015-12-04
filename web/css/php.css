@@ -1,0 +1,186 @@
+/**
+ * This theme is based off of the highlighting from Eclipse PDT
+ */
+
+/** Strings
+******************************************************************************/
+.pretty-php .T_CONSTANT_ENCAPSED_STRING,
+.pretty-php .T_ENCAPSED_AND_WHITESPACE {
+	color: #0000c0;
+}
+
+/** Comments
+******************************************************************************/
+.pretty-php .T_COMMENT {
+	color: #557f5f;
+}
+
+.pretty-php .T_COMMENT .C_COMMENT_LINK {
+	text-decoration: none;
+	color: #557f5f;
+}
+
+.pretty-php .T_COMMENT .C_COMMENT_LINK:hover {
+	text-decoration: underline;
+	color: #78b385;
+}
+
+/** PHPDoc Comments
+******************************************************************************/
+.pretty-php .T_DOC_COMMENT {
+	color: #3f55bf;
+}
+
+.pretty-php .T_DOC_COMMENT .C_DOCBLOCK_TAG {
+	color: #7f9fbf;
+	font-weight: 700;
+}
+
+.pretty-php .T_DOC_COMMENT .C_DOCBLOCK_LINK {
+	text-decoration: none;
+	color: #3f55bf;
+}
+
+.pretty-php .T_DOC_COMMENT .C_DOCBLOCK_LINK:hover {
+	text-decoration: underline;
+	color: #0066cc;
+}
+
+/** Keywords
+******************************************************************************/
+.pretty-php .C_SELF,
+.pretty-php .C_NULL,
+.pretty-php .C_TRUE,
+.pretty-php .C_FALSE,
+.pretty-php .T_ABSTRACT,
+.pretty-php .T_ARRAY,
+.pretty-php .T_AS,
+.pretty-php .T_BREAK,
+.pretty-php .T_CASE,
+.pretty-php .T_CATCH,
+.pretty-php .T_CLASS,
+.pretty-php .T_CLONE,
+.pretty-php .T_CONST,
+.pretty-php .T_CONTINUE,
+.pretty-php .T_DECLARE,
+.pretty-php .T_DEFAULT,
+.pretty-php .T_DO,
+.pretty-php .T_ECHO,
+.pretty-php .T_ELSE,
+.pretty-php .T_ELSEIF,
+.pretty-php .T_EMPTY,
+.pretty-php .T_ENDDECLARE,
+.pretty-php .T_ENDFOR,
+.pretty-php .T_ENDFOREACH,
+.pretty-php .T_ENDIF,
+.pretty-php .T_ENDSWITCH,
+.pretty-php .T_ENDWHILE,
+.pretty-php .T_EVAL,
+.pretty-php .T_EXIT,
+.pretty-php .T_EXTENDS,
+.pretty-php .T_FINAL,
+.pretty-php .T_FOR,
+.pretty-php .T_FOREACH,
+.pretty-php .T_FUNCTION,
+.pretty-php .T_GLOBAL,
+.pretty-php .T_GOTO,
+.pretty-php .T_IF,
+.pretty-php .T_IMPLEMENTS,
+.pretty-php .T_INCLUDE,
+.pretty-php .T_INCLUDE_ONCE,
+.pretty-php .T_INSTANCEOF,
+.pretty-php .T_INTERFACE,
+.pretty-php .T_ISSET,
+.pretty-php .T_LOGICAL_AND,
+.pretty-php .T_LOGICAL_OR,
+.pretty-php .T_LOGICAL_XOR,
+.pretty-php .T_NAMESPACE,
+.pretty-php .T_NEW,
+.pretty-php .T_PRINT,
+.pretty-php .T_PRIVATE,
+.pretty-php .T_PUBLIC,
+.pretty-php .T_PROTECTED,
+.pretty-php .T_REQUIRE,
+.pretty-php .T_REQUIRE_ONCE,
+.pretty-php .T_RETURN,
+.pretty-php .T_STATIC,
+.pretty-php .T_SWITCH,
+.pretty-php .T_THROW,
+.pretty-php .T_TRY,
+.pretty-php .T_UNSET,
+.pretty-php .T_USE,
+.pretty-php .T_VAR,
+.pretty-php .T_WHILE {
+	color: #950055;
+	font-weight: 700;
+}
+
+/** "Operators"
+******************************************************************************/
+.pretty-php .T_OPERATOR,
+.pretty-php .T_IS_NOT_EQUAL,
+.pretty-php .T_AND_EQUAL,
+.pretty-php .T_BOOLEAN_AND,
+.pretty-php .T_BOOLEAN_OR,
+.pretty-php .T_CONCAT_EQUAL,
+.pretty-php .T_DIV_EQUAL,
+.pretty-php .T_DOUBLE_ARROW,
+.pretty-php .T_DOUBLE_COLON,
+.pretty-php .T_IS_EQUAL,
+.pretty-php .T_IS_GREATER_OR_EQUAL,
+.pretty-php .T_IS_IDENTICAL,
+.pretty-php .T_IS_NOT_EQUAL,
+.pretty-php .T_IS_NOT_IDENTICAL,
+.pretty-php .T_IS_SMALLER_OR_EQUAL,
+.pretty-php .T_MINUS_EQUAL,
+.pretty-php .T_MOD_EQUAL,
+.pretty-php .T_MUL_EQUAL,
+.pretty-php .T_OBJECT_OPERATOR,
+.pretty-php .T_OR_EQUAL,
+.pretty-php .T_PAAMAYIM_NEKUDOTAYIM,
+.pretty-php .T_PLUS_EQUAL,
+.pretty-php .T_SL_EQUAL,
+.pretty-php .T_SR_EQUAL,
+.pretty-php .T_XOR_EQUAL {
+	color: #000;
+}
+
+/** Bitwise Operators (<< and >>)
+******************************************************************************/
+.pretty-php .T_SL,
+.pretty-php .T_SR {
+	color: #000;
+}
+
+/** PHP Open/Close Tags (<?php, ?>)
+******************************************************************************/
+.pretty-php .T_OPEN_TAG,
+.pretty-php .T_CLOSE_TAG {
+	color: #f00;
+	font-weight: 700;
+}
+
+/** Class variables (Being defined)
+******************************************************************************/
+.pretty-php .T_PROTECTED + .T_VARIABLE {
+	color: #0000c0;
+}
+
+/** Class properties
+******************************************************************************/
+.pretty-php .T_OBJECT_OPERATOR + .T_STRING {
+	color: #0000c0;
+}
+
+/** Class methods
+******************************************************************************/
+.pretty-php .C_METHOD_CALL {
+	color: #000!important;
+}
+
+/** Heredocs
+******************************************************************************/
+.pretty-php .T_START_HEREDOC,
+.pretty-php .T_END_HEREDOC {
+	color: #008282;
+}
