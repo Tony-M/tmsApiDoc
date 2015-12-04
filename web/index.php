@@ -35,9 +35,9 @@ switch ($action) {
         }
 
         .code_block{position:relative; display: table; width:100%; color:#BF360C; font-family: monospace; font-size: 12px; padding: 4px; border: 1px solid #f1f1f1; background: #fefefe;}
-        .code_text{float:left ;position:relative; top:0px}
-        .code_lines{relative; top:0px; background: #eee;float:left; min-width:40px; color:gray; text-align:right; display:block; padding-right:8px; border-right: 1px solid gray; margin-right:8px}
-        .code_title{position:absolute; left:4px; width: 40px}
+        .code_text{position:absolute; left:50px; top:0px; float:left ;position:relative; top:0px; overflow-x: auto; line-height: 18px;}
+        .code_lines{position:absolute; left: 0px; top:0px; height: 100%;  relative; top:0px;line-height: 18px; background: #eee;float:left; min-width:40px; color:gray; text-align:right; display:block; padding-right:8px; border-right: 1px solid gray; margin-right:8px}
+        .code_title{position:absolute; left:0px; width: 40px; top: 0px;}
 
 
     </style>

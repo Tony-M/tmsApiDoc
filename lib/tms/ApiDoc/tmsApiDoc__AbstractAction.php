@@ -19,8 +19,9 @@ abstract class tmsApiDoc__AbstractAction
         $data = static::FormatJson($data);
         $data = static::FormatXml($data);
         $data = static::FormatPhp($data);
+
         $data = preg_replace('/[\r\n]{2,}/',PHP_EOL,$data);
-        $data = nl2br($data);
+//        $data = nl2br($data);
         return $data;
     }
 
@@ -102,20 +103,16 @@ abstract class tmsApiDoc__AbstractAction
                 $in_json = false;
                 $tmp = static::indentJson($tmp) . PHP_EOL;
                 $tmp = preg_replace('/([{}\"\:])/', '<span style="color:green">$1</span>', $tmp);
-//                $tmp='<div style="color:firebrick; font-family: monospace; font-size: 12px; padding: 4px; border: 1px solid #f1f1f1; background: #fefefe;">'.$tmp.'</div>';
-//                $tmp = '<div style="color:#BF360C; font-family: monospace; font-size: 12px; padding: 4px; border: 1px solid #f1f1f1; background: #fefefe;">' . $tmp . '</div>';
-//                $tmp='<div style="color:#1565C0; font-family: monospace; font-size: 12px; padding: 4px; border: 1px solid #f1f1f1; background: #fefefe;">'.$tmp.'</div>';
-
                 $n = substr_count($tmp, '<br />')+1;
                 $lines = '';
                 for ($i = 0; $i < $n; $i++) $lines .= $i . '<br />';
                 $tmp = '<div class="code_block">'
-                    . '<span class="label label-info code_title" >JSON</span>'
                     . '<div class="code_lines">'.$lines. '</div>'
                     .'<div class="code_text">'
                     . $tmp
                     . '</div>'
-//                    . '</div>'
+                    . '<span class="label label-info code_title" >JSON</span>'
+
                     . '</div>';
 
                 $result .= $tmp . PHP_EOL;
@@ -154,17 +151,13 @@ abstract class tmsApiDoc__AbstractAction
                 $n = substr_count($tmp, '<br />');
                 $lines = '';
                 for ($i = 0; $i < $n; $i++) $lines .= $i . '<br />';
-//                $tmp = preg_replace('/([{}\"\:])/','<span style="color:green">$1</span>',$tmp);
-//                $tmp='<div style="color:firebrick; font-family: monospace; font-size: 12px; padding: 4px; border: 1px solid #f1f1f1; background: #fefefe;">'.$tmp.'</div>';
                 $tmp = '<div class="code_block">'
-                    . '<span class="label label-info code_title">XML</span>'
                     . '<div class="code_lines">'.$lines. '</div>'
                     .'<div class="code_text">'
                     . $tmp
                     . '</div>'
-//                    . '</div>'
+                    . '<span class="label label-info code_title">XML</span>'
                     . '</div>';
-//                $tmp='<div style="color:#1565C0; font-family: monospace; font-size: 12px; padding: 4px; border: 1px solid #f1f1f1; background: #fefefe;">'.$tmp.'</div>';
                 $tmp = preg_replace('/[\r\n]/','',$tmp);
                 $result .= $tmp . PHP_EOL;
                 $tmp = '';
@@ -243,17 +236,14 @@ abstract class tmsApiDoc__AbstractAction
                 $n = substr_count($tmp, '<br />');
                 $lines = '';
                 for ($i = 0; $i < $n; $i++) $lines .= $i . '<br />';
-//                $tmp = preg_replace('/([{}\"\:])/','<span style="color:green">$1</span>',$tmp);
-//                $tmp='<div style="color:firebrick; font-family: monospace; font-size: 12px; padding: 4px; border: 1px solid #f1f1f1; background: #fefefe;">'.$tmp.'</div>';
                 $tmp = '<div class="code_block">'
-                    . '<span class="label label-info code_title">PHP</span>'
                     . '<div class="code_lines">'.$lines. '</div>'
                     .'<div class="code_text">'
                     . $tmp
                     . '</div>'
-//                    . '</div>'
+                    . '<span class="label label-info code_title">PHP</span>'
+
                     . '</div>';
-//                $tmp='<div style="color:#1565C0; font-family: monospace; font-size: 12px; padding: 4px; border: 1px solid #f1f1f1; background: #fefefe;">'.$tmp.'</div>';
                 $result .= $tmp . PHP_EOL;
                 $tmp = '';
                 continue;
