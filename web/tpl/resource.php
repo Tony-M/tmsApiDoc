@@ -13,21 +13,27 @@
             <div  class="desc"><?php echo \tms\ApiDoc\tmsApiDoc::tell($data, 'description'); ?></div>
             <hr/>
         <?php endif; ?>
-        <?php if (!is_null(\tms\ApiDoc\tmsApiDoc::tell($data, 'url'))): ?>
-            <h4 class="text-primary">URL:</h4>
-            <code class="desc"><?php echo \tms\ApiDoc\tmsApiDoc::tell($data, 'url'); ?></code>
-            <hr/>
-        <?php endif; ?>
         <?php if (!is_null(\tms\ApiDoc\tmsApiDoc::tell($data,'method'))): ?>
             <h4 class="text-primary">Метод:</h4>
 
             <div  class="desc"><?php echo \tms\ApiDoc\tmsApiDoc::tell($data,'method'); ?></div>
             <hr/>
         <?php endif; ?>
+        <?php if (!is_null(\tms\ApiDoc\tmsApiDoc::tell($data, 'url'))): ?>
+            <h4 class="text-primary">URL:</h4>
+            <code class="desc"><?php echo \tms\ApiDoc\tmsApiDoc::tell($data, 'url'); ?></code>
+            <hr/>
+        <?php endif; ?>
         <?php if (!is_null(\tms\ApiDoc\tmsApiDoc::tell($data,'headers'))): ?>
             <h4 class="text-primary">Заголовки запроса:</h4>
 
             <div  class="desc"><?php echo \tms\ApiDoc\tmsApiDoc::tell($data,'headers'); ?></div>
+            <hr/>
+        <?php endif; ?>
+      <?php if (!is_null(\tms\ApiDoc\tmsApiDoc::tell($data,'responseheaders'))): ?>
+            <h4 class="text-primary">Заголовки ответа:</h4>
+
+            <div  class="desc"><?php echo \tms\ApiDoc\tmsApiDoc::tell($data,'responseheaders'); ?></div>
             <hr/>
         <?php endif; ?>
         <?php if (!is_null(\tms\ApiDoc\tmsApiDoc::tell($data,'get'))): ?>

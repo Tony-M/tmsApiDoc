@@ -10,6 +10,10 @@ GET
 :GET:
 id - идентификатор пользователя, данные которого необходимо получить
 
+:HEADERS:
+headers to send
+:RESPONSEHEADERS:
+response headers
 :DESCRIPTION:
 <b>Сервис</b> — серверное приложение, отвечающее на запросы клиентов.
 |

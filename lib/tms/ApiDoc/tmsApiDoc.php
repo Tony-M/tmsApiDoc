@@ -80,7 +80,7 @@ class tmsApiDoc
                     continue;
                 }
                 if (substr($line, 0, 1) != ';' && $line!='') {
-                    if($line=='|')$line='';
+//                     if($line=='|')$line='';
                     if(!isset($data[$key]))$data[$key] = '';
                     $data[$key] .= $line.PHP_EOL;
                 }
@@ -116,6 +116,12 @@ class tmsApiDoc
 
     public static function tell($param,$key)
     {
-        if (isset($param[$key])) return $param[$key]; else return null;
+      if (isset($param[$key])) {
+        $t = $param[$key];
+        $t = preg_replace('/^(\|){1}/mi','<br/>', $t);
+        return $t; 
+      }
+      else 
+        return null;
     }
 }

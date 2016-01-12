@@ -14,7 +14,7 @@
             <tr>
                 <td><?php echo $row['method']; ?></td>
                 <td><?php echo $row['url']; ?></td>
-                <td><a href="/?act=resource&r=<?php echo $row['resource'];?>"><?php echo $row['title']; ?></a></td>
+                <td><a href="<?php echo SLASH;?>?act=resource&r=<?php echo $row['resource'];?>"><?php echo $row['title']; ?></a></td>
             </tr>
         <?php endforeach; ?>
     <?php endif; ?>
